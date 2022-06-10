@@ -12,6 +12,7 @@
     "start": "next start",
     "lint": "eslint --ext \".jsx,.js\" --ignore-path .gitignore .",
     "format": "prettier --write \"*/**/*.{jsx,js}\"",
+    "test": "jest --watch",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -24,10 +25,21 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^12.1.6",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.2.0",
     "cross-env": "^7.0.3",
     "eslint": "8.17.0",
     "eslint-config-next": "12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "eslint-plugin-jest-dom": "^4.0.2",
+    "eslint-plugin-jest-formatting": "^3.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-testing-library": "^5.5.1",
     "husky": "^8.0.1",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
     "lint-staged": "^13.0.1",
     "prettier": "^2.6.2"
   },
