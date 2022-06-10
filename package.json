@@ -9,8 +9,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --write \"*/**/*.{jsx,js}\""
+    "lint": "eslint --ext \".jsx,.js\" --ignore-path .gitignore .",
+    "format": "prettier --write \"*/**/*.{jsx,js}\"",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "12.1.6",
@@ -20,7 +21,15 @@
   "devDependencies": {
     "eslint": "8.17.0",
     "eslint-config-next": "12.1.6",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.1",
     "prettier": "^2.6.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npm run lint",
+      "npm run format"
+    ]
   },
   "engines": {
     "node": ">=16.0.0"
