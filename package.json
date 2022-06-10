@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:stats": "cross-env ANALYZE=true npm run build",
     "start": "next start",
     "lint": "eslint --ext \".jsx,.js\" --ignore-path .gitignore .",
     "format": "prettier --write \"*/**/*.{jsx,js}\"",
@@ -19,6 +20,8 @@
     "react-dom": "18.1.0"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^12.1.6",
+    "cross-env": "^7.0.3",
     "eslint": "8.17.0",
     "eslint-config-next": "12.1.6",
     "husky": "^8.0.1",
