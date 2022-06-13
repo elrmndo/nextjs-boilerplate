@@ -5,8 +5,7 @@ export function Header({ size }) {
   return (
     <>
       <h1
-        className={cn({
-          [styles['header']]: size === 'sm',
+        className={cn(styles.header, {
           [styles['header--large']]: size === 'lg',
         })}
       >
