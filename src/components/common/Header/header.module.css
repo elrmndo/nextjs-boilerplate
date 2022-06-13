@@ -1,0 +1,7 @@
+.header {
+  @apply text-lg;
+}
+
+.header--large {
+  @apply text-2xl;
+}
