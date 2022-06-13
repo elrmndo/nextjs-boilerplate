@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import styles from './header.module.css';
+import styles from './header.module.scss';
 
 export function Header({ size }) {
   return (
