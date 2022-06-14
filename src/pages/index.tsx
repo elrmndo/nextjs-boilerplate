@@ -1,4 +1,4 @@
-import { Header } from '@/components/common/Header';
+import { Header } from '@/core/layout/Header';
 import Head from 'next/head';
 import Image from 'next/image';
 
