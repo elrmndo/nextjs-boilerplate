@@ -1,7 +1,11 @@
 import cn from 'classnames';
 import styles from './header.module.scss';
 
-export function Header({ size }) {
+type Props = {
+  size: 'lg' | 'sm';
+};
+
+export function Header({ size }: Props) {
   return (
     <>
       <h1

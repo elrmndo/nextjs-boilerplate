@@ -10,8 +10,9 @@
     "build": "next build",
     "build:stats": "cross-env ANALYZE=true npm run build",
     "start": "next start",
-    "lint": "eslint --ext \".jsx,.js\" --ignore-path .gitignore .",
-    "format": "prettier --write \"*/**/*.{jsx,js}\"",
+    "check:lint": "eslint --ext \".jsx,.js\" --ignore-path .gitignore .",
+    "check:types": "tsc --noEmit",
+    "check:format": "prettier --write \"*/**/*.{jsx,js}\"",
     "test": "jest --watch",
     "prepare": "husky install"
   },
@@ -46,9 +47,10 @@
     "sass": "^1.52.3"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "npm run lint",
-      "npm run format"
+    "*.{ts,tsx}": [
+      "bash -c 'npm run check:types'",
+      "npm run check:lint",
+      "npm run check:format"
     ],
     "*.json": [
       "prettier --write"

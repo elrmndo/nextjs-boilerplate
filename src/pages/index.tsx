@@ -1,6 +1,6 @@
+import { Header } from '@/components/common/Header';
 import Head from 'next/head';
 import Image from 'next/image';
-import { Header } from '../components/common/Header';
 
 export default function Home() {
   return (
